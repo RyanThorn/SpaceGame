@@ -1,0 +1,7 @@
+Twitch Chat badges as powerups
+Mod - more powerful attack
+Admin - Explosive radius attack
+Turbo - Move faster
+etc..
+
+Add progress bar at bottom for getting to the end

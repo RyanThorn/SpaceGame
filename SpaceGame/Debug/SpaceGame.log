@@ -1,0 +1,20 @@
+﻿Build started 24/03/2015 14:50:49.
+     1>Project "D:\Ryan\College\OOP\C++\Projects\SpaceGame - No Kappa\SpaceGame\SpaceGame.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ID:\Ryan\College\OOP\C++\Librarys\allegro\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>d:\ryan\college\oop\c++\projects\spacegame - no kappa\spacegame\main.cpp(317): warning C4805: '==' : unsafe mix of type 'float' and type 'bool' in operation
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Ryan\College\OOP\C++\Projects\SpaceGame - No Kappa\Debug\SpaceGame.exe" /INCREMENTAL /NOLOGO /LIBPATH:D:\Ryan\College\OOP\C++\Librarys\allegro\lib "allegro-5.0.10-monolith-md-debug.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Ryan\College\OOP\C++\Projects\SpaceGame - No Kappa\Debug\SpaceGame.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Ryan\College\OOP\C++\Projects\SpaceGame - No Kappa\Debug\SpaceGame.lib" /MACHINE:X86 Debug\Background.obj
+         Debug\Bullet.obj
+         Debug\Comet.obj
+         Debug\Explosion.obj
+         Debug\GameObject.obj
+         Debug\main.obj
+         Debug\SpaceShip.obj
+         SpaceGame.vcxproj -> D:\Ryan\College\OOP\C++\Projects\SpaceGame - No Kappa\Debug\SpaceGame.exe
+     1>Done Building Project "D:\Ryan\College\OOP\C++\Projects\SpaceGame - No Kappa\SpaceGame\SpaceGame.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.37

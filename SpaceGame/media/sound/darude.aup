@@ -1,0 +1,920 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="darude_data" version="1.3.0" audacityversion="2.0.6" sel0="0.0000000000" sel1="219.7530000007" vpos="0" h="0.0000000000" zoom="2.6024958978" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds">
+	<tags>
+		<tag name="handler_name" value="SoundHandler"/>
+		<tag name="major_brand" value="dash"/>
+		<tag name="encoder" value="Lavf55.33.100"/>
+		<tag name="language" value="und"/>
+		<tag name="compatible_brands" value="iso6mp41"/>
+		<tag name="minor_version" value="0"/>
+		<tag name="creation_time" value="2014-03-07 04:39:33"/>
+	</tags>
+	<wavetrack name="darude" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="524288" sampleformat="131073" numsamples="10167163">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000453.au" len="524288" min="-0.276154" max="0.246338" rms="0.018495"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0000c25.au" len="524288" min="-0.30423" max="0.352478" rms="0.034596"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="e0000e24.au" len="524288" min="-0.306671" max="0.271057" rms="0.061096"/>
+				</waveblock>
+				<waveblock start="1572864">
+					<simpleblockfile filename="e0000156.au" len="524288" min="-0.272095" max="0.268555" rms="0.064954"/>
+				</waveblock>
+				<waveblock start="2097152">
+					<simpleblockfile filename="e0000870.au" len="524288" min="-0.26413" max="0.278839" rms="0.066971"/>
+				</waveblock>
+				<waveblock start="2621440">
+					<simpleblockfile filename="e0000f58.au" len="524288" min="-0.273254" max="0.287506" rms="0.067028"/>
+				</waveblock>
+				<waveblock start="3145728">
+					<simpleblockfile filename="e00004cf.au" len="524288" min="-0.287842" max="0.283173" rms="0.067489"/>
+				</waveblock>
+				<waveblock start="3670016">
+					<simpleblockfile filename="e0000288.au" len="524288" min="-0.299927" max="0.273987" rms="0.044083"/>
+				</waveblock>
+				<waveblock start="4194304">
+					<simpleblockfile filename="e0000018.au" len="524288" min="-0.285889" max="0.288452" rms="0.03311"/>
+				</waveblock>
+				<waveblock start="4718592">
+					<simpleblockfile filename="e000089c.au" len="524288" min="-0.270294" max="0.255768" rms="0.038716"/>
+				</waveblock>
+				<waveblock start="5242880">
+					<simpleblockfile filename="e0000180.au" len="524288" min="-0.258362" max="0.284943" rms="0.046181"/>
+				</waveblock>
+				<waveblock start="5767168">
+					<simpleblockfile filename="e0000ce9.au" len="524288" min="-0.243134" max="0.211365" rms="0.046191"/>
+				</waveblock>
+				<waveblock start="6291456">
+					<simpleblockfile filename="e0000d2a.au" len="524288" min="-0.331757" max="0.26709" rms="0.064058"/>
+				</waveblock>
+				<waveblock start="6815744">
+					<simpleblockfile filename="e000035a.au" len="524288" min="-0.253967" max="0.269989" rms="0.065678"/>
+				</waveblock>
+				<waveblock start="7340032">
+					<simpleblockfile filename="e0000a98.au" len="524288" min="-0.283081" max="0.281708" rms="0.067245"/>
+				</waveblock>
+				<waveblock start="7864320">
+					<simpleblockfile filename="e0000682.au" len="524288" min="-0.316345" max="0.273529" rms="0.068153"/>
+				</waveblock>
+				<waveblock start="8388608">
+					<simpleblockfile filename="e000078d.au" len="524288" min="-0.312134" max="0.278015" rms="0.066313"/>
+				</waveblock>
+				<waveblock start="8912896">
+					<simpleblockfile filename="e000055e.au" len="524288" min="-0.269196" max="0.277954" rms="0.066816"/>
+				</waveblock>
+				<waveblock start="9437184">
+					<simpleblockfile filename="e00007cb.au" len="524288" min="-0.279327" max="0.281555" rms="0.051209"/>
+				</waveblock>
+				<waveblock start="9961472">
+					<simpleblockfile filename="e0000540.au" len="205691" min="-0.001251" max="0.001892" rms="0.000278"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="darude" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="524288" sampleformat="131073" numsamples="10167163">
+				<waveblock start="0">
+					<simpleblockfile filename="e00005a2.au" len="524288" min="-0.267426" max="0.242828" rms="0.018334"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0000280.au" len="524288" min="-0.305786" max="0.340546" rms="0.033067"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="e0000201.au" len="524288" min="-0.256958" max="0.30545" rms="0.05701"/>
+				</waveblock>
+				<waveblock start="1572864">
+					<simpleblockfile filename="e0000cab.au" len="524288" min="-0.27887" max="0.263519" rms="0.066229"/>
+				</waveblock>
+				<waveblock start="2097152">
+					<simpleblockfile filename="e000069c.au" len="524288" min="-0.262146" max="0.284973" rms="0.068073"/>
+				</waveblock>
+				<waveblock start="2621440">
+					<simpleblockfile filename="e0000c5a.au" len="524288" min="-0.283844" max="0.294983" rms="0.068382"/>
+				</waveblock>
+				<waveblock start="3145728">
+					<simpleblockfile filename="e00005a6.au" len="524288" min="-0.255249" max="0.279785" rms="0.067526"/>
+				</waveblock>
+				<waveblock start="3670016">
+					<simpleblockfile filename="e0000b87.au" len="524288" min="-0.259796" max="0.267792" rms="0.040954"/>
+				</waveblock>
+				<waveblock start="4194304">
+					<simpleblockfile filename="e0000041.au" len="524288" min="-0.300873" max="0.271667" rms="0.032969"/>
+				</waveblock>
+				<waveblock start="4718592">
+					<simpleblockfile filename="e00005c4.au" len="524288" min="-0.247101" max="0.242004" rms="0.039735"/>
+				</waveblock>
+				<waveblock start="5242880">
+					<simpleblockfile filename="e0000b0f.au" len="524288" min="-0.273895" max="0.292023" rms="0.047932"/>
+				</waveblock>
+				<waveblock start="5767168">
+					<simpleblockfile filename="e000055f.au" len="524288" min="-0.224609" max="0.219879" rms="0.047359"/>
+				</waveblock>
+				<waveblock start="6291456">
+					<simpleblockfile filename="e000088a.au" len="524288" min="-0.273193" max="0.275635" rms="0.061677"/>
+				</waveblock>
+				<waveblock start="6815744">
+					<simpleblockfile filename="e0000490.au" len="524288" min="-0.26532" max="0.269379" rms="0.067474"/>
+				</waveblock>
+				<waveblock start="7340032">
+					<simpleblockfile filename="e00007a9.au" len="524288" min="-0.28241" max="0.252533" rms="0.068036"/>
+				</waveblock>
+				<waveblock start="7864320">
+					<simpleblockfile filename="e000052d.au" len="524288" min="-0.27356" max="0.269073" rms="0.068713"/>
+				</waveblock>
+				<waveblock start="8388608">
+					<simpleblockfile filename="e0000d4d.au" len="524288" min="-0.276398" max="0.298706" rms="0.066859"/>
+				</waveblock>
+				<waveblock start="8912896">
+					<simpleblockfile filename="e0000970.au" len="524288" min="-0.283661" max="0.286713" rms="0.068514"/>
+				</waveblock>
+				<waveblock start="9437184">
+					<simpleblockfile filename="e00006ec.au" len="524288" min="-0.280823" max="0.252869" rms="0.048921"/>
+				</waveblock>
+				<waveblock start="9961472">
+					<simpleblockfile filename="e0000034.au" len="205691" min="-0.001221" max="0.001221" rms="0.000284"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<labeltrack name="Label Track" numlabels="771" height="73" minimized="0" isSelected="1">
+		<label t="0.91700000" t1="0.91700000" title="B"/>
+		<label t="0.95700000" t1="0.95700000" title="B"/>
+		<label t="0.99900000" t1="0.99900000" title="B"/>
+		<label t="1.04600000" t1="1.04600000" title="B"/>
+		<label t="1.08500000" t1="1.08500000" title="B"/>
+		<label t="1.10900000" t1="1.10900000" title="B"/>
+		<label t="14.57600000" t1="14.57600000" title="B"/>
+		<label t="14.62600000" t1="14.62600000" title="B"/>
+		<label t="14.74800000" t1="14.74800000" title="B"/>
+		<label t="14.77600000" t1="14.77600000" title="B"/>
+		<label t="15.03700000" t1="15.03700000" title="B"/>
+		<label t="15.06700000" t1="15.06700000" title="B"/>
+		<label t="15.10700000" t1="15.10700000" title="B"/>
+		<label t="15.19200000" t1="15.19200000" title="B"/>
+		<label t="22.07700000" t1="22.07700000" title="B"/>
+		<label t="22.11900000" t1="22.11900000" title="B"/>
+		<label t="22.15900000" t1="22.15900000" title="B"/>
+		<label t="22.24800000" t1="22.24800000" title="B"/>
+		<label t="29.13700000" t1="29.13700000" title="B"/>
+		<label t="29.19100000" t1="29.19100000" title="B"/>
+		<label t="29.21700000" t1="29.21700000" title="B"/>
+		<label t="29.23000000" t1="29.23000000" title="B"/>
+		<label t="29.54500000" t1="29.54500000" title="B"/>
+		<label t="29.57500000" t1="29.57500000" title="B"/>
+		<label t="29.61600000" t1="29.61600000" title="B"/>
+		<label t="30.01400000" t1="30.01400000" title="B"/>
+		<label t="30.02400000" t1="30.02400000" title="B"/>
+		<label t="30.03800000" t1="30.03800000" title="B"/>
+		<label t="30.07200000" t1="30.07200000" title="B"/>
+		<label t="30.46600000" t1="30.46600000" title="B"/>
+		<label t="30.53200000" t1="30.53200000" title="B"/>
+		<label t="30.90700000" t1="30.90700000" title="B"/>
+		<label t="31.34800000" t1="31.34800000" title="B"/>
+		<label t="31.79000000" t1="31.79000000" title="B"/>
+		<label t="31.85800000" t1="31.85800000" title="B"/>
+		<label t="32.23000000" t1="32.23000000" title="B"/>
+		<label t="32.61400000" t1="32.61400000" title="B"/>
+		<label t="32.65800000" t1="32.65800000" title="B"/>
+		<label t="32.76200000" t1="32.76200000" title="B"/>
+		<label t="33.10200000" t1="33.10200000" title="B"/>
+		<label t="33.54500000" t1="33.54500000" title="B"/>
+		<label t="33.61900000" t1="33.61900000" title="B"/>
+		<label t="33.98700000" t1="33.98700000" title="B"/>
+		<label t="33.99200000" t1="33.99200000" title="B"/>
+		<label t="34.07900000" t1="34.07900000" title="B"/>
+		<label t="34.42900000" t1="34.42900000" title="B"/>
+		<label t="34.43300000" t1="34.43300000" title="B"/>
+		<label t="34.52200000" t1="34.52200000" title="B"/>
+		<label t="34.82000000" t1="34.82000000" title="B"/>
+		<label t="34.83000000" t1="34.83000000" title="B"/>
+		<label t="34.86400000" t1="34.86400000" title="B"/>
+		<label t="35.27400000" t1="35.27400000" title="B"/>
+		<label t="35.30700000" t1="35.30700000" title="B"/>
+		<label t="35.31400000" t1="35.31400000" title="B"/>
+		<label t="35.40700000" t1="35.40700000" title="B"/>
+		<label t="35.75800000" t1="35.75800000" title="B"/>
+		<label t="35.85000000" t1="35.85000000" title="B"/>
+		<label t="35.96800000" t1="35.96800000" title="B"/>
+		<label t="35.99200000" t1="35.99200000" title="B"/>
+		<label t="36.19900000" t1="36.19900000" title="B"/>
+		<label t="36.26600000" t1="36.26600000" title="B"/>
+		<label t="36.63200000" t1="36.63200000" title="B"/>
+		<label t="36.73000000" t1="36.73000000" title="B"/>
+		<label t="37.07900000" t1="37.07900000" title="B"/>
+		<label t="37.14600000" t1="37.14600000" title="B"/>
+		<label t="37.51200000" t1="37.51200000" title="B"/>
+		<label t="37.95200000" t1="37.95200000" title="B"/>
+		<label t="38.39200000" t1="38.39200000" title="B"/>
+		<label t="38.46800000" t1="38.46800000" title="B"/>
+		<label t="38.49300000" t1="38.49300000" title="B"/>
+		<label t="38.84200000" t1="38.84200000" title="B"/>
+		<label t="39.27400000" t1="39.27400000" title="B"/>
+		<label t="39.71200000" t1="39.71200000" title="B"/>
+		<label t="39.81400000" t1="39.81400000" title="B"/>
+		<label t="40.16600000" t1="40.16600000" title="B"/>
+		<label t="40.62000000" t1="40.62000000" title="B"/>
+		<label t="40.69500000" t1="40.69500000" title="B"/>
+		<label t="41.04600000" t1="41.04600000" title="B"/>
+		<label t="41.48800000" t1="41.48800000" title="B"/>
+		<label t="41.51500000" t1="41.51500000" title="B"/>
+		<label t="41.92000000" t1="41.92000000" title="B"/>
+		<label t="41.99500000" t1="41.99500000" title="B"/>
+		<label t="42.35800000" t1="42.35800000" title="B"/>
+		<label t="42.43600000" t1="42.43600000" title="B"/>
+		<label t="42.45800000" t1="42.45800000" title="B"/>
+		<label t="42.80000000" t1="42.80000000" title="B"/>
+		<label t="42.87800000" t1="42.87800000" title="B"/>
+		<label t="43.04600000" t1="43.04600000" title="B"/>
+		<label t="43.09600000" t1="43.09600000" title="B"/>
+		<label t="43.24900000" t1="43.24900000" title="B"/>
+		<label t="43.68300000" t1="43.68300000" title="B"/>
+		<label t="43.76100000" t1="43.76100000" title="B"/>
+		<label t="44.12300000" t1="44.12300000" title="B"/>
+		<label t="44.56400000" t1="44.56400000" title="B"/>
+		<label t="44.66200000" t1="44.66200000" title="B"/>
+		<label t="45.00900000" t1="45.00900000" title="B"/>
+		<label t="45.01300000" t1="45.01300000" title="B"/>
+		<label t="45.10300000" t1="45.10300000" title="B"/>
+		<label t="45.45500000" t1="45.45500000" title="B"/>
+		<label t="45.89600000" t1="45.89600000" title="B"/>
+		<label t="45.98300000" t1="45.98300000" title="B"/>
+		<label t="46.32900000" t1="46.32900000" title="B"/>
+		<label t="46.42800000" t1="46.42800000" title="B"/>
+		<label t="46.72100000" t1="46.72100000" title="B"/>
+		<label t="46.73300000" t1="46.73300000" title="B"/>
+		<label t="46.77800000" t1="46.77800000" title="B"/>
+		<label t="47.21800000" t1="47.21800000" title="B"/>
+		<label t="47.65000000" t1="47.65000000" title="B"/>
+		<label t="48.09200000" t1="48.09200000" title="B"/>
+		<label t="48.53300000" t1="48.53300000" title="B"/>
+		<label t="48.97300000" t1="48.97300000" title="B"/>
+		<label t="49.42400000" t1="49.42400000" title="B"/>
+		<label t="49.85200000" t1="49.85200000" title="B"/>
+		<label t="49.95600000" t1="49.95600000" title="B"/>
+		<label t="50.07900000" t1="50.07900000" title="B"/>
+		<label t="50.08300000" t1="50.08300000" title="B"/>
+		<label t="50.13000000" t1="50.13000000" title="B"/>
+		<label t="50.30800000" t1="50.30800000" title="B"/>
+		<label t="50.31700000" t1="50.31700000" title="B"/>
+		<label t="50.73500000" t1="50.73500000" title="B"/>
+		<label t="50.83300000" t1="50.83300000" title="B"/>
+		<label t="51.14400000" t1="51.14400000" title="B"/>
+		<label t="51.17600000" t1="51.17600000" title="B"/>
+		<label t="51.62800000" t1="51.62800000" title="B"/>
+		<label t="52.05700000" t1="52.05700000" title="B"/>
+		<label t="52.50000000" t1="52.50000000" title="B"/>
+		<label t="52.59800000" t1="52.59800000" title="B"/>
+		<label t="52.94900000" t1="52.94900000" title="B"/>
+		<label t="53.03900000" t1="53.03900000" title="B"/>
+		<label t="53.38300000" t1="53.38300000" title="B"/>
+		<label t="53.77500000" t1="53.77500000" title="B"/>
+		<label t="53.82000000" t1="53.82000000" title="B"/>
+		<label t="54.26300000" t1="54.26300000" title="B"/>
+		<label t="54.71300000" t1="54.71300000" title="B"/>
+		<label t="55.14600000" t1="55.14600000" title="B"/>
+		<label t="55.24300000" t1="55.24300000" title="B"/>
+		<label t="55.59400000" t1="55.59400000" title="B"/>
+		<label t="56.02700000" t1="56.02700000" title="B"/>
+		<label t="56.46500000" t1="56.46500000" title="B"/>
+		<label t="56.56500000" t1="56.56500000" title="B"/>
+		<label t="56.91800000" t1="56.91800000" title="B"/>
+		<label t="57.00900000" t1="57.00900000" title="B"/>
+		<label t="57.12900000" t1="57.12900000" title="B"/>
+		<label t="57.35000000" t1="57.35000000" title="B"/>
+		<label t="57.44700000" t1="57.44700000" title="B"/>
+		<label t="57.79900000" t1="57.79900000" title="B"/>
+		<label t="58.23800000" t1="58.23800000" title="B"/>
+		<label t="58.32600000" t1="58.32600000" title="B"/>
+		<label t="58.67200000" t1="58.67200000" title="B"/>
+		<label t="59.11100000" t1="59.11100000" title="B"/>
+		<label t="59.55200000" t1="59.55200000" title="B"/>
+		<label t="59.65000000" t1="59.65000000" title="B"/>
+		<label t="60.00500000" t1="60.00500000" title="B"/>
+		<label t="60.44500000" t1="60.44500000" title="B"/>
+		<label t="60.83000000" t1="60.83000000" title="B"/>
+		<label t="60.84200000" t1="60.84200000" title="B"/>
+		<label t="60.87700000" t1="60.87700000" title="B"/>
+		<label t="61.31700000" t1="61.31700000" title="B"/>
+		<label t="61.39300000" t1="61.39300000" title="B"/>
+		<label t="61.75900000" t1="61.75900000" title="B"/>
+		<label t="61.83300000" t1="61.83300000" title="B"/>
+		<label t="62.20800000" t1="62.20800000" title="B"/>
+		<label t="62.64100000" t1="62.64100000" title="B"/>
+		<label t="63.07800000" t1="63.07800000" title="B"/>
+		<label t="63.17600000" t1="63.17600000" title="B"/>
+		<label t="63.52200000" t1="63.52200000" title="B"/>
+		<label t="63.59700000" t1="63.59700000" title="B"/>
+		<label t="63.97400000" t1="63.97400000" title="B"/>
+		<label t="63.98400000" t1="63.98400000" title="B"/>
+		<label t="64.19300000" t1="64.19300000" title="B"/>
+		<label t="64.20700000" t1="64.20700000" title="B"/>
+		<label t="64.41200000" t1="64.41200000" title="B"/>
+		<label t="64.85400000" t1="64.85400000" title="B"/>
+		<label t="65.28400000" t1="65.28400000" title="B"/>
+		<label t="65.73600000" t1="65.73600000" title="B"/>
+		<label t="65.74800000" t1="65.74800000" title="B"/>
+		<label t="65.80100000" t1="65.80100000" title="B"/>
+		<label t="66.17500000" t1="66.17500000" title="B"/>
+		<label t="66.61600000" t1="66.61600000" title="B"/>
+		<label t="66.70700000" t1="66.70700000" title="B"/>
+		<label t="67.01700000" t1="67.01700000" title="B"/>
+		<label t="67.04400000" t1="67.04400000" title="B"/>
+		<label t="67.48900000" t1="67.48900000" title="B"/>
+		<label t="67.58700000" t1="67.58700000" title="B"/>
+		<label t="67.93800000" t1="67.93800000" title="B"/>
+		<label t="68.00500000" t1="68.00500000" title="B"/>
+		<label t="68.38000000" t1="68.38000000" title="B"/>
+		<label t="68.82200000" t1="68.82200000" title="B"/>
+		<label t="69.25100000" t1="69.25100000" title="B"/>
+		<label t="69.35300000" t1="69.35300000" title="B"/>
+		<label t="69.69500000" t1="69.69500000" title="B"/>
+		<label t="70.14300000" t1="70.14300000" title="B"/>
+		<label t="70.23200000" t1="70.23200000" title="B"/>
+		<label t="70.57300000" t1="70.57300000" title="B"/>
+		<label t="71.02500000" t1="71.02500000" title="B"/>
+		<label t="71.23400000" t1="71.23400000" title="B"/>
+		<label t="71.31100000" t1="71.31100000" title="B"/>
+		<label t="71.46600000" t1="71.46600000" title="B"/>
+		<label t="71.90700000" t1="71.90700000" title="B"/>
+		<label t="71.99900000" t1="71.99900000" title="B"/>
+		<label t="72.33700000" t1="72.33700000" title="B"/>
+		<label t="72.39400000" t1="72.39400000" title="B"/>
+		<label t="72.41600000" t1="72.41600000" title="B"/>
+		<label t="72.43900000" t1="72.43900000" title="B"/>
+		<label t="72.78700000" t1="72.78700000" title="B"/>
+		<label t="72.87700000" t1="72.87700000" title="B"/>
+		<label t="73.19000000" t1="73.19000000" title="B"/>
+		<label t="73.22800000" t1="73.22800000" title="B"/>
+		<label t="73.31700000" t1="73.31700000" title="B"/>
+		<label t="73.66300000" t1="73.66300000" title="B"/>
+		<label t="73.66900000" t1="73.66900000" title="B"/>
+		<label t="74.10100000" t1="74.10100000" title="B"/>
+		<label t="74.55800000" t1="74.55800000" title="B"/>
+		<label t="74.56700000" t1="74.56700000" title="B"/>
+		<label t="74.58200000" t1="74.58200000" title="B"/>
+		<label t="74.95100000" t1="74.95100000" title="B"/>
+		<label t="74.98300000" t1="74.98300000" title="B"/>
+		<label t="75.39200000" t1="75.39200000" title="B"/>
+		<label t="75.42400000" t1="75.42400000" title="B"/>
+		<label t="75.86700000" t1="75.86700000" title="B"/>
+		<label t="76.30700000" t1="76.30700000" title="B"/>
+		<label t="76.71600000" t1="76.71600000" title="B"/>
+		<label t="76.74500000" t1="76.74500000" title="B"/>
+		<label t="76.80400000" t1="76.80400000" title="B"/>
+		<label t="76.82500000" t1="76.82500000" title="B"/>
+		<label t="76.84800000" t1="76.84800000" title="B"/>
+		<label t="77.18700000" t1="77.18700000" title="B"/>
+		<label t="77.63800000" t1="77.63800000" title="B"/>
+		<label t="77.70600000" t1="77.70600000" title="B"/>
+		<label t="78.06700000" t1="78.06700000" title="B"/>
+		<label t="78.29900000" t1="78.29900000" title="B"/>
+		<label t="78.32800000" t1="78.32800000" title="B"/>
+		<label t="78.36600000" t1="78.36600000" title="B"/>
+		<label t="78.52200000" t1="78.52200000" title="B"/>
+		<label t="78.58700000" t1="78.58700000" title="B"/>
+		<label t="78.95900000" t1="78.95900000" title="B"/>
+		<label t="79.04800000" t1="79.04800000" title="B"/>
+		<label t="79.40100000" t1="79.40100000" title="B"/>
+		<label t="79.44900000" t1="79.44900000" title="B"/>
+		<label t="79.47300000" t1="79.47300000" title="B"/>
+		<label t="79.83500000" t1="79.83500000" title="B"/>
+		<label t="80.27400000" t1="80.27400000" title="B"/>
+		<label t="80.71300000" t1="80.71300000" title="B"/>
+		<label t="80.78900000" t1="80.78900000" title="B"/>
+		<label t="81.15800000" t1="81.15800000" title="B"/>
+		<label t="81.21100000" t1="81.21100000" title="B"/>
+		<label t="81.23200000" t1="81.23200000" title="B"/>
+		<label t="81.60500000" t1="81.60500000" title="B"/>
+		<label t="81.67300000" t1="81.67300000" title="B"/>
+		<label t="82.04800000" t1="82.04800000" title="B"/>
+		<label t="82.06000000" t1="82.06000000" title="B"/>
+		<label t="82.48800000" t1="82.48800000" title="B"/>
+		<label t="82.53500000" t1="82.53500000" title="B"/>
+		<label t="82.55600000" t1="82.55600000" title="B"/>
+		<label t="82.92100000" t1="82.92100000" title="B"/>
+		<label t="82.92600000" t1="82.92600000" title="B"/>
+		<label t="83.37400000" t1="83.37400000" title="B"/>
+		<label t="83.38400000" t1="83.38400000" title="B"/>
+		<label t="83.41800000" t1="83.41800000" title="B"/>
+		<label t="83.43700000" t1="83.43700000" title="B"/>
+		<label t="83.81000000" t1="83.81000000" title="B"/>
+		<label t="83.87700000" t1="83.87700000" title="B"/>
+		<label t="84.06200000" t1="84.06200000" title="B"/>
+		<label t="84.09900000" t1="84.09900000" title="B"/>
+		<label t="84.12300000" t1="84.12300000" title="B"/>
+		<label t="84.26600000" t1="84.26600000" title="B"/>
+		<label t="84.28200000" t1="84.28200000" title="B"/>
+		<label t="84.30100000" t1="84.30100000" title="B"/>
+		<label t="84.32200000" t1="84.32200000" title="B"/>
+		<label t="84.50300000" t1="84.50300000" title="B"/>
+		<label t="84.70500000" t1="84.70500000" title="B"/>
+		<label t="84.94200000" t1="84.94200000" title="B"/>
+		<label t="84.98200000" t1="84.98200000" title="B"/>
+		<label t="85.00500000" t1="85.00500000" title="B"/>
+		<label t="85.14700000" t1="85.14700000" title="B"/>
+		<label t="85.16300000" t1="85.16300000" title="B"/>
+		<label t="85.18300000" t1="85.18300000" title="B"/>
+		<label t="85.20400000" t1="85.20400000" title="B"/>
+		<label t="85.37000000" t1="85.37000000" title="B"/>
+		<label t="85.38300000" t1="85.38300000" title="B"/>
+		<label t="85.40100000" t1="85.40100000" title="B"/>
+		<label t="85.42100000" t1="85.42100000" title="B"/>
+		<label t="85.56600000" t1="85.56600000" title="B"/>
+		<label t="85.61000000" t1="85.61000000" title="B"/>
+		<label t="92.60200000" t1="92.60200000" title="B"/>
+		<label t="92.62700000" t1="92.62700000" title="B"/>
+		<label t="92.65500000" t1="92.65500000" title="B"/>
+		<label t="92.77900000" t1="92.77900000" title="B"/>
+		<label t="94.36000000" t1="94.36000000" title="B"/>
+		<label t="94.39000000" t1="94.39000000" title="B"/>
+		<label t="94.41900000" t1="94.41900000" title="B"/>
+		<label t="94.50300000" t1="94.50300000" title="B"/>
+		<label t="94.54300000" t1="94.54300000" title="B"/>
+		<label t="94.56900000" t1="94.56900000" title="B"/>
+		<label t="95.05400000" t1="95.05400000" title="B"/>
+		<label t="95.08300000" t1="95.08300000" title="B"/>
+		<label t="95.20800000" t1="95.20800000" title="B"/>
+		<label t="95.23200000" t1="95.23200000" title="B"/>
+		<label t="95.71500000" t1="95.71500000" title="B"/>
+		<label t="95.74400000" t1="95.74400000" title="B"/>
+		<label t="95.76100000" t1="95.76100000" title="B"/>
+		<label t="95.78000000" t1="95.78000000" title="B"/>
+		<label t="95.86900000" t1="95.86900000" title="B"/>
+		<label t="96.15400000" t1="96.15400000" title="B"/>
+		<label t="96.18600000" t1="96.18600000" title="B"/>
+		<label t="96.20400000" t1="96.20400000" title="B"/>
+		<label t="96.22000000" t1="96.22000000" title="B"/>
+		<label t="96.30900000" t1="96.30900000" title="B"/>
+		<label t="99.66700000" t1="99.66700000" title="B"/>
+		<label t="99.76500000" t1="99.76500000" title="B"/>
+		<label t="99.84900000" t1="99.84900000" title="B"/>
+		<label t="113.35000000" t1="113.35000000" title="B"/>
+		<label t="113.38100000" t1="113.38100000" title="B"/>
+		<label t="113.41800000" t1="113.41800000" title="B"/>
+		<label t="113.50300000" t1="113.50300000" title="B"/>
+		<label t="113.55900000" t1="113.55900000" title="B"/>
+		<label t="113.58400000" t1="113.58400000" title="B"/>
+		<label t="113.59600000" t1="113.59600000" title="B"/>
+		<label t="113.63800000" t1="113.63800000" title="B"/>
+		<label t="113.77800000" t1="113.77800000" title="B"/>
+		<label t="113.81700000" t1="113.81700000" title="B"/>
+		<label t="113.83400000" t1="113.83400000" title="B"/>
+		<label t="113.86000000" t1="113.86000000" title="B"/>
+		<label t="113.87700000" t1="113.87700000" title="B"/>
+		<label t="120.81200000" t1="120.81200000" title="B"/>
+		<label t="120.81900000" t1="120.81900000" title="B"/>
+		<label t="120.86900000" t1="120.86900000" title="B"/>
+		<label t="120.89100000" t1="120.89100000" title="B"/>
+		<label t="120.97900000" t1="120.97900000" title="B"/>
+		<label t="120.98700000" t1="120.98700000" title="B"/>
+		<label t="127.43800000" t1="127.43800000" title="B"/>
+		<label t="127.46500000" t1="127.46500000" title="B"/>
+		<label t="127.50400000" t1="127.50400000" title="B"/>
+		<label t="127.58900000" t1="127.58900000" title="B"/>
+		<label t="127.64500000" t1="127.64500000" title="B"/>
+		<label t="127.72600000" t1="127.72600000" title="B"/>
+		<label t="127.86300000" t1="127.86300000" title="B"/>
+		<label t="127.91800000" t1="127.91800000" title="B"/>
+		<label t="149.03100000" t1="149.03100000" title="B"/>
+		<label t="149.06500000" t1="149.06500000" title="B"/>
+		<label t="149.12800000" t1="149.12800000" title="B"/>
+		<label t="149.48300000" t1="149.48300000" title="B"/>
+		<label t="149.51100000" t1="149.51100000" title="B"/>
+		<label t="149.93500000" t1="149.93500000" title="B"/>
+		<label t="149.97000000" t1="149.97000000" title="B"/>
+		<label t="150.36400000" t1="150.36400000" title="B"/>
+		<label t="150.39300000" t1="150.39300000" title="B"/>
+		<label t="150.43100000" t1="150.43100000" title="B"/>
+		<label t="150.80400000" t1="150.80400000" title="B"/>
+		<label t="150.81600000" t1="150.81600000" title="B"/>
+		<label t="150.83100000" t1="150.83100000" title="B"/>
+		<label t="150.85100000" t1="150.85100000" title="B"/>
+		<label t="150.87100000" t1="150.87100000" title="B"/>
+		<label t="151.25900000" t1="151.25900000" title="B"/>
+		<label t="151.27400000" t1="151.27400000" title="B"/>
+		<label t="151.67900000" t1="151.67900000" title="B"/>
+		<label t="151.69800000" t1="151.69800000" title="B"/>
+		<label t="152.12800000" t1="152.12800000" title="B"/>
+		<label t="152.14100000" t1="152.14100000" title="B"/>
+		<label t="152.15600000" t1="152.15600000" title="B"/>
+		<label t="152.17200000" t1="152.17200000" title="B"/>
+		<label t="152.52600000" t1="152.52600000" title="B"/>
+		<label t="152.56800000" t1="152.56800000" title="B"/>
+		<label t="152.58000000" t1="152.58000000" title="B"/>
+		<label t="152.99600000" t1="152.99600000" title="B"/>
+		<label t="153.07600000" t1="153.07600000" title="B"/>
+		<label t="153.39200000" t1="153.39200000" title="B"/>
+		<label t="153.44800000" t1="153.44800000" title="B"/>
+		<label t="153.47700000" t1="153.47700000" title="B"/>
+		<label t="153.49600000" t1="153.49600000" title="B"/>
+		<label t="153.51700000" t1="153.51700000" title="B"/>
+		<label t="153.88900000" t1="153.88900000" title="B"/>
+		<label t="153.93800000" t1="153.93800000" title="B"/>
+		<label t="154.33200000" t1="154.33200000" title="B"/>
+		<label t="154.34200000" t1="154.34200000" title="B"/>
+		<label t="154.41600000" t1="154.41600000" title="B"/>
+		<label t="154.43900000" t1="154.43900000" title="B"/>
+		<label t="154.78800000" t1="154.78800000" title="B"/>
+		<label t="154.80100000" t1="154.80100000" title="B"/>
+		<label t="155.17200000" t1="155.17200000" title="B"/>
+		<label t="155.21100000" t1="155.21100000" title="B"/>
+		<label t="155.65200000" t1="155.65200000" title="B"/>
+		<label t="155.70100000" t1="155.70100000" title="B"/>
+		<label t="155.87300000" t1="155.87300000" title="B"/>
+		<label t="156.10100000" t1="156.10100000" title="B"/>
+		<label t="156.11000000" t1="156.11000000" title="B"/>
+		<label t="156.16700000" t1="156.16700000" title="B"/>
+		<label t="156.53600000" t1="156.53600000" title="B"/>
+		<label t="156.58300000" t1="156.58300000" title="B"/>
+		<label t="156.97600000" t1="156.97600000" title="B"/>
+		<label t="157.00400000" t1="157.00400000" title="B"/>
+		<label t="157.02100000" t1="157.02100000" title="B"/>
+		<label t="157.04200000" t1="157.04200000" title="B"/>
+		<label t="157.41700000" t1="157.41700000" title="B"/>
+		<label t="157.86100000" t1="157.86100000" title="B"/>
+		<label t="157.92600000" t1="157.92600000" title="B"/>
+		<label t="158.31400000" t1="158.31400000" title="B"/>
+		<label t="158.74000000" t1="158.74000000" title="B"/>
+		<label t="158.75200000" t1="158.75200000" title="B"/>
+		<label t="158.78900000" t1="158.78900000" title="B"/>
+		<label t="159.18300000" t1="159.18300000" title="B"/>
+		<label t="159.19300000" t1="159.19300000" title="B"/>
+		<label t="159.22700000" t1="159.22700000" title="B"/>
+		<label t="159.24900000" t1="159.24900000" title="B"/>
+		<label t="159.62200000" t1="159.62200000" title="B"/>
+		<label t="159.66800000" t1="159.66800000" title="B"/>
+		<label t="159.68800000" t1="159.68800000" title="B"/>
+		<label t="160.06500000" t1="160.06500000" title="B"/>
+		<label t="160.07600000" t1="160.07600000" title="B"/>
+		<label t="160.50500000" t1="160.50500000" title="B"/>
+		<label t="160.57100000" t1="160.57100000" title="B"/>
+		<label t="160.94400000" t1="160.94400000" title="B"/>
+		<label t="161.01200000" t1="161.01200000" title="B"/>
+		<label t="161.38700000" t1="161.38700000" title="B"/>
+		<label t="161.39700000" t1="161.39700000" title="B"/>
+		<label t="161.41400000" t1="161.41400000" title="B"/>
+		<label t="161.82800000" t1="161.82800000" title="B"/>
+		<label t="161.85500000" t1="161.85500000" title="B"/>
+		<label t="161.87400000" t1="161.87400000" title="B"/>
+		<label t="162.26000000" t1="162.26000000" title="B"/>
+		<label t="162.26500000" t1="162.26500000" title="B"/>
+		<label t="162.31300000" t1="162.31300000" title="B"/>
+		<label t="162.70800000" t1="162.70800000" title="B"/>
+		<label t="162.75600000" t1="162.75600000" title="B"/>
+		<label t="162.92700000" t1="162.92700000" title="B"/>
+		<label t="162.94400000" t1="162.94400000" title="B"/>
+		<label t="162.95700000" t1="162.95700000" title="B"/>
+		<label t="162.97500000" t1="162.97500000" title="B"/>
+		<label t="162.99500000" t1="162.99500000" title="B"/>
+		<label t="163.16300000" t1="163.16300000" title="B"/>
+		<label t="163.17800000" t1="163.17800000" title="B"/>
+		<label t="163.60500000" t1="163.60500000" title="B"/>
+		<label t="163.63700000" t1="163.63700000" title="B"/>
+		<label t="163.65800000" t1="163.65800000" title="B"/>
+		<label t="164.04900000" t1="164.04900000" title="B"/>
+		<label t="164.06000000" t1="164.06000000" title="B"/>
+		<label t="164.07700000" t1="164.07700000" title="B"/>
+		<label t="164.47300000" t1="164.47300000" title="B"/>
+		<label t="164.48500000" t1="164.48500000" title="B"/>
+		<label t="164.91200000" t1="164.91200000" title="B"/>
+		<label t="164.97900000" t1="164.97900000" title="B"/>
+		<label t="165.35400000" t1="165.35400000" title="B"/>
+		<label t="165.79400000" t1="165.79400000" title="B"/>
+		<label t="166.23500000" t1="166.23500000" title="B"/>
+		<label t="166.28400000" t1="166.28400000" title="B"/>
+		<label t="166.67000000" t1="166.67000000" title="B"/>
+		<label t="166.74300000" t1="166.74300000" title="B"/>
+		<label t="167.11700000" t1="167.11700000" title="B"/>
+		<label t="167.16400000" t1="167.16400000" title="B"/>
+		<label t="167.18400000" t1="167.18400000" title="B"/>
+		<label t="167.56000000" t1="167.56000000" title="B"/>
+		<label t="167.98700000" t1="167.98700000" title="B"/>
+		<label t="168.04600000" t1="168.04600000" title="B"/>
+		<label t="168.45300000" t1="168.45300000" title="B"/>
+		<label t="168.88200000" t1="168.88200000" title="B"/>
+		<label t="168.92900000" t1="168.92900000" title="B"/>
+		<label t="169.32300000" t1="169.32300000" title="B"/>
+		<label t="169.76600000" t1="169.76600000" title="B"/>
+		<label t="169.79200000" t1="169.79200000" title="B"/>
+		<label t="169.97300000" t1="169.97300000" title="B"/>
+		<label t="169.99700000" t1="169.99700000" title="B"/>
+		<label t="170.02900000" t1="170.02900000" title="B"/>
+		<label t="170.20500000" t1="170.20500000" title="B"/>
+		<label t="170.21700000" t1="170.21700000" title="B"/>
+		<label t="170.23300000" t1="170.23300000" title="B"/>
+		<label t="170.25300000" t1="170.25300000" title="B"/>
+		<label t="170.27200000" t1="170.27200000" title="B"/>
+		<label t="170.29600000" t1="170.29600000" title="B"/>
+		<label t="170.63700000" t1="170.63700000" title="B"/>
+		<label t="170.65800000" t1="170.65800000" title="B"/>
+		<label t="170.71400000" t1="170.71400000" title="B"/>
+		<label t="171.08900000" t1="171.08900000" title="B"/>
+		<label t="171.09700000" t1="171.09700000" title="B"/>
+		<label t="171.11400000" t1="171.11400000" title="B"/>
+		<label t="171.13200000" t1="171.13200000" title="B"/>
+		<label t="171.52600000" t1="171.52600000" title="B"/>
+		<label t="171.96700000" t1="171.96700000" title="B"/>
+		<label t="172.40900000" t1="172.40900000" title="B"/>
+		<label t="172.41800000" t1="172.41800000" title="B"/>
+		<label t="172.85100000" t1="172.85100000" title="B"/>
+		<label t="172.86200000" t1="172.86200000" title="B"/>
+		<label t="172.87700000" t1="172.87700000" title="B"/>
+		<label t="173.29100000" t1="173.29100000" title="B"/>
+		<label t="173.34000000" t1="173.34000000" title="B"/>
+		<label t="173.35700000" t1="173.35700000" title="B"/>
+		<label t="173.38000000" t1="173.38000000" title="B"/>
+		<label t="173.73100000" t1="173.73100000" title="B"/>
+		<label t="173.79900000" t1="173.79900000" title="B"/>
+		<label t="174.17400000" t1="174.17400000" title="B"/>
+		<label t="174.20200000" t1="174.20200000" title="B"/>
+		<label t="174.21800000" t1="174.21800000" title="B"/>
+		<label t="174.60600000" t1="174.60600000" title="B"/>
+		<label t="174.61000000" t1="174.61000000" title="B"/>
+		<label t="174.68100000" t1="174.68100000" title="B"/>
+		<label t="175.08700000" t1="175.08700000" title="B"/>
+		<label t="175.10100000" t1="175.10100000" title="B"/>
+		<label t="175.12100000" t1="175.12100000" title="B"/>
+		<label t="175.14300000" t1="175.14300000" title="B"/>
+		<label t="175.49900000" t1="175.49900000" title="B"/>
+		<label t="175.50800000" t1="175.50800000" title="B"/>
+		<label t="175.93700000" t1="175.93700000" title="B"/>
+		<label t="175.96500000" t1="175.96500000" title="B"/>
+		<label t="175.98300000" t1="175.98300000" title="B"/>
+		<label t="176.00200000" t1="176.00200000" title="B"/>
+		<label t="176.38800000" t1="176.38800000" title="B"/>
+		<label t="176.42500000" t1="176.42500000" title="B"/>
+		<label t="177.10800000" t1="177.10800000" title="B"/>
+		<label t="177.29000000" t1="177.29000000" title="B"/>
+		<label t="177.30700000" t1="177.30700000" title="B"/>
+		<label t="177.70100000" t1="177.70100000" title="B"/>
+		<label t="177.74700000" t1="177.74700000" title="B"/>
+		<label t="178.15700000" t1="178.15700000" title="B"/>
+		<label t="178.16800000" t1="178.16800000" title="B"/>
+		<label t="178.18700000" t1="178.18700000" title="B"/>
+		<label t="178.61300000" t1="178.61300000" title="B"/>
+		<label t="178.63000000" t1="178.63000000" title="B"/>
+		<label t="178.64900000" t1="178.64900000" title="B"/>
+		<label t="179.02100000" t1="179.02100000" title="B"/>
+		<label t="179.08800000" t1="179.08800000" title="B"/>
+		<label t="179.11200000" t1="179.11200000" title="B"/>
+		<label t="179.46400000" t1="179.46400000" title="B"/>
+		<label t="179.47600000" t1="179.47600000" title="B"/>
+		<label t="179.49100000" t1="179.49100000" title="B"/>
+		<label t="179.90200000" t1="179.90200000" title="B"/>
+		<label t="180.33200000" t1="180.33200000" title="B"/>
+		<label t="180.39000000" t1="180.39000000" title="B"/>
+		<label t="180.78500000" t1="180.78500000" title="B"/>
+		<label t="180.85200000" t1="180.85200000" title="B"/>
+		<label t="181.24000000" t1="181.24000000" title="B"/>
+		<label t="181.66900000" t1="181.66900000" title="B"/>
+		<label t="181.73700000" t1="181.73700000" title="B"/>
+		<label t="182.12200000" t1="182.12200000" title="B"/>
+		<label t="182.55000000" t1="182.55000000" title="B"/>
+		<label t="182.57700000" t1="182.57700000" title="B"/>
+		<label t="182.98100000" t1="182.98100000" title="B"/>
+		<label t="183.03700000" t1="183.03700000" title="B"/>
+		<label t="183.42300000" t1="183.42300000" title="B"/>
+		<label t="183.44300000" t1="183.44300000" title="B"/>
+		<label t="183.47800000" t1="183.47800000" title="B"/>
+		<label t="183.50000000" t1="183.50000000" title="B"/>
+		<label t="183.52000000" t1="183.52000000" title="B"/>
+		<label t="183.54200000" t1="183.54200000" title="B"/>
+		<label t="183.90100000" t1="183.90100000" title="B"/>
+		<label t="183.93900000" t1="183.93900000" title="B"/>
+		<label t="184.10400000" t1="184.10400000" title="B"/>
+		<label t="184.13900000" t1="184.13900000" title="B"/>
+		<label t="184.16200000" t1="184.16200000" title="B"/>
+		<label t="184.32900000" t1="184.32900000" title="B"/>
+		<label t="184.34500000" t1="184.34500000" title="B"/>
+		<label t="184.78500000" t1="184.78500000" title="B"/>
+		<label t="184.82200000" t1="184.82200000" title="B"/>
+		<label t="185.15600000" t1="185.15600000" title="B"/>
+		<label t="185.19500000" t1="185.19500000" title="B"/>
+		<label t="185.20700000" t1="185.20700000" title="B"/>
+		<label t="185.22500000" t1="185.22500000" title="B"/>
+		<label t="185.24300000" t1="185.24300000" title="B"/>
+		<label t="185.26000000" t1="185.26000000" title="B"/>
+		<label t="185.63600000" t1="185.63600000" title="B"/>
+		<label t="185.70400000" t1="185.70400000" title="B"/>
+		<label t="186.07600000" t1="186.07600000" title="B"/>
+		<label t="186.12700000" t1="186.12700000" title="B"/>
+		<label t="186.14600000" t1="186.14600000" title="B"/>
+		<label t="186.51000000" t1="186.51000000" title="B"/>
+		<label t="186.53000000" t1="186.53000000" title="B"/>
+		<label t="186.58600000" t1="186.58600000" title="B"/>
+		<label t="186.96200000" t1="186.96200000" title="B"/>
+		<label t="186.98900000" t1="186.98900000" title="B"/>
+		<label t="187.43200000" t1="187.43200000" title="B"/>
+		<label t="187.82900000" t1="187.82900000" title="B"/>
+		<label t="187.88900000" t1="187.88900000" title="B"/>
+		<label t="188.28200000" t1="188.28200000" title="B"/>
+		<label t="188.31000000" t1="188.31000000" title="B"/>
+		<label t="188.32800000" t1="188.32800000" title="B"/>
+		<label t="188.72100000" t1="188.72100000" title="B"/>
+		<label t="188.77100000" t1="188.77100000" title="B"/>
+		<label t="188.79100000" t1="188.79100000" title="B"/>
+		<label t="189.16400000" t1="189.16400000" title="B"/>
+		<label t="189.17800000" t1="189.17800000" title="B"/>
+		<label t="189.60600000" t1="189.60600000" title="B"/>
+		<label t="189.65100000" t1="189.65100000" title="B"/>
+		<label t="189.69300000" t1="189.69300000" title="B"/>
+		<label t="189.71700000" t1="189.71700000" title="B"/>
+		<label t="189.85900000" t1="189.85900000" title="B"/>
+		<label t="189.87000000" t1="189.87000000" title="B"/>
+		<label t="189.89200000" t1="189.89200000" title="B"/>
+		<label t="190.05800000" t1="190.05800000" title="B"/>
+		<label t="190.29600000" t1="190.29600000" title="B"/>
+		<label t="190.33300000" t1="190.33300000" title="B"/>
+		<label t="190.75400000" t1="190.75400000" title="B"/>
+		<label t="190.77400000" t1="190.77400000" title="B"/>
+		<label t="190.94100000" t1="190.94100000" title="B"/>
+		<label t="191.18100000" t1="191.18100000" title="B"/>
+		<label t="191.21900000" t1="191.21900000" title="B"/>
+		<label t="191.38600000" t1="191.38600000" title="B"/>
+		<label t="191.39900000" t1="191.39900000" title="B"/>
+		<label t="191.85800000" t1="191.85800000" title="B"/>
+		<label t="191.87300000" t1="191.87300000" title="B"/>
+		<label t="191.90200000" t1="191.90200000" title="B"/>
+		<label t="192.26400000" t1="192.26400000" title="B"/>
+		<label t="192.70400000" t1="192.70400000" title="B"/>
+		<label t="192.75900000" t1="192.75900000" title="B"/>
+		<label t="193.14400000" t1="193.14400000" title="B"/>
+		<label t="193.15800000" t1="193.15800000" title="B"/>
+		<label t="193.58700000" t1="193.58700000" title="B"/>
+		<label t="194.01500000" t1="194.01500000" title="B"/>
+		<label t="194.02500000" t1="194.02500000" title="B"/>
+		<label t="194.04000000" t1="194.04000000" title="B"/>
+		<label t="194.07700000" t1="194.07700000" title="B"/>
+		<label t="194.48500000" t1="194.48500000" title="B"/>
+		<label t="194.50000000" t1="194.50000000" title="B"/>
+		<label t="194.82500000" t1="194.82500000" title="B"/>
+		<label t="194.89700000" t1="194.89700000" title="B"/>
+		<label t="194.90700000" t1="194.90700000" title="B"/>
+		<label t="194.92300000" t1="194.92300000" title="B"/>
+		<label t="194.94100000" t1="194.94100000" title="B"/>
+		<label t="194.96200000" t1="194.96200000" title="B"/>
+		<label t="194.98400000" t1="194.98400000" title="B"/>
+		<label t="195.32600000" t1="195.32600000" title="B"/>
+		<label t="195.36600000" t1="195.36600000" title="B"/>
+		<label t="195.38300000" t1="195.38300000" title="B"/>
+		<label t="195.40700000" t1="195.40700000" title="B"/>
+		<label t="195.79000000" t1="195.79000000" title="B"/>
+		<label t="196.21000000" t1="196.21000000" title="B"/>
+		<label t="196.23100000" t1="196.23100000" title="B"/>
+		<label t="196.65900000" t1="196.65900000" title="B"/>
+		<label t="196.70500000" t1="196.70500000" title="B"/>
+		<label t="196.72500000" t1="196.72500000" title="B"/>
+		<label t="196.74500000" t1="196.74500000" title="B"/>
+		<label t="196.76900000" t1="196.76900000" title="B"/>
+		<label t="197.11300000" t1="197.11300000" title="B"/>
+		<label t="197.14600000" t1="197.14600000" title="B"/>
+		<label t="197.54000000" t1="197.54000000" title="B"/>
+		<label t="197.99700000" t1="197.99700000" title="B"/>
+		<label t="198.04900000" t1="198.04900000" title="B"/>
+		<label t="198.19300000" t1="198.19300000" title="B"/>
+		<label t="198.43600000" t1="198.43600000" title="B"/>
+		<label t="198.45000000" t1="198.45000000" title="B"/>
+		<label t="198.47000000" t1="198.47000000" title="B"/>
+		<label t="198.49100000" t1="198.49100000" title="B"/>
+		<label t="198.87800000" t1="198.87800000" title="B"/>
+		<label t="198.89200000" t1="198.89200000" title="B"/>
+		<label t="199.31800000" t1="199.31800000" title="B"/>
+		<label t="199.37400000" t1="199.37400000" title="B"/>
+		<label t="199.74400000" t1="199.74400000" title="B"/>
+		<label t="199.79600000" t1="199.79600000" title="B"/>
+		<label t="199.81400000" t1="199.81400000" title="B"/>
+		<label t="200.18700000" t1="200.18700000" title="B"/>
+		<label t="200.19800000" t1="200.19800000" title="B"/>
+		<label t="200.25400000" t1="200.25400000" title="B"/>
+		<label t="200.62800000" t1="200.62800000" title="B"/>
+		<label t="200.65600000" t1="200.65600000" title="B"/>
+		<label t="200.67400000" t1="200.67400000" title="B"/>
+		<label t="201.06600000" t1="201.06600000" title="B"/>
+		<label t="201.13400000" t1="201.13400000" title="B"/>
+		<label t="201.50900000" t1="201.50900000" title="B"/>
+		<label t="201.55700000" t1="201.55700000" title="B"/>
+		<label t="201.96600000" t1="201.96600000" title="B"/>
+		<label t="201.97900000" t1="201.97900000" title="B"/>
+		<label t="202.01600000" t1="202.01600000" title="B"/>
+		<label t="202.39100000" t1="202.39100000" title="B"/>
+		<label t="202.43500000" t1="202.43500000" title="B"/>
+		<label t="202.45900000" t1="202.45900000" title="B"/>
+		<label t="202.83200000" t1="202.83200000" title="B"/>
+		<label t="202.86000000" t1="202.86000000" title="B"/>
+		<label t="202.88000000" t1="202.88000000" title="B"/>
+		<label t="202.90000000" t1="202.90000000" title="B"/>
+		<label t="203.27300000" t1="203.27300000" title="B"/>
+		<label t="203.30400000" t1="203.30400000" title="B"/>
+		<label t="203.31800000" t1="203.31800000" title="B"/>
+		<label t="203.72500000" t1="203.72500000" title="B"/>
+		<label t="203.82100000" t1="203.82100000" title="B"/>
+		<label t="203.84400000" t1="203.84400000" title="B"/>
+		<label t="204.15400000" t1="204.15400000" title="B"/>
+		<label t="204.18100000" t1="204.18100000" title="B"/>
+		<label t="204.22100000" t1="204.22100000" title="B"/>
+		<label t="204.59500000" t1="204.59500000" title="B"/>
+		<label t="205.03000000" t1="205.03000000" title="B"/>
+		<label t="205.25800000" t1="205.25800000" title="B"/>
+		<label t="205.49200000" t1="205.49200000" title="B"/>
+		<label t="205.52700000" t1="205.52700000" title="B"/>
+		<label t="205.54600000" t1="205.54600000" title="B"/>
+		<label t="205.91100000" t1="205.91100000" title="B"/>
+		<label t="205.93100000" t1="205.93100000" title="B"/>
+		<label t="206.35800000" t1="206.35800000" title="B"/>
+		<label t="206.38700000" t1="206.38700000" title="B"/>
+		<label t="206.40500000" t1="206.40500000" title="B"/>
+		<label t="206.42500000" t1="206.42500000" title="B"/>
+		<label t="206.79900000" t1="206.79900000" title="B"/>
+		<label t="206.81300000" t1="206.81300000" title="B"/>
+		<label t="206.87000000" t1="206.87000000" title="B"/>
+		<label t="207.24100000" t1="207.24100000" title="B"/>
+		<label t="207.30700000" t1="207.30700000" title="B"/>
+		<label t="207.67600000" t1="207.67600000" title="B"/>
+		<label t="208.12400000" t1="208.12400000" title="B"/>
+		<label t="208.17000000" t1="208.17000000" title="B"/>
+		<label t="208.56700000" t1="208.56700000" title="B"/>
+		<label t="209.00700000" t1="209.00700000" title="B"/>
+		<label t="209.01700000" t1="209.01700000" title="B"/>
+		<label t="209.05100000" t1="209.05100000" title="B"/>
+		<label t="209.07300000" t1="209.07300000" title="B"/>
+		<label t="209.44700000" t1="209.44700000" title="B"/>
+		<label t="209.53400000" t1="209.53400000" title="B"/>
+		<label t="209.90000000" t1="209.90000000" title="B"/>
+		<label t="209.95300000" t1="209.95300000" title="B"/>
+		<label t="210.34400000" t1="210.34400000" title="B"/>
+		<label t="210.39800000" t1="210.39800000" title="B"/>
+		<label t="210.78400000" t1="210.78400000" title="B"/>
+		<label t="210.79800000" t1="210.79800000" title="B"/>
+		<label t="210.81700000" t1="210.81700000" title="B"/>
+		<label t="210.83700000" t1="210.83700000" title="B"/>
+		<label t="211.20000000" t1="211.20000000" title="B"/>
+		<label t="211.22300000" t1="211.22300000" title="B"/>
+		<label t="211.25600000" t1="211.25600000" title="B"/>
+		<label t="211.27800000" t1="211.27800000" title="B"/>
+		<label t="211.66400000" t1="211.66400000" title="B"/>
+		<label t="211.67600000" t1="211.67600000" title="B"/>
+		<label t="211.69600000" t1="211.69600000" title="B"/>
+		<label t="211.71700000" t1="211.71700000" title="B"/>
+		<label t="211.73700000" t1="211.73700000" title="B"/>
+		<label t="211.75800000" t1="211.75800000" title="B"/>
+		<label t="211.78400000" t1="211.78400000" title="B"/>
+		<label t="212.10700000" t1="212.10700000" title="B"/>
+		<label t="212.12000000" t1="212.12000000" title="B"/>
+		<label t="212.13700000" t1="212.13700000" title="B"/>
+		<label t="212.34100000" t1="212.34100000" title="B"/>
+		<label t="212.53700000" t1="212.53700000" title="B"/>
+		<label t="212.54700000" t1="212.54700000" title="B"/>
+		<label t="212.56300000" t1="212.56300000" title="B"/>
+		<label t="212.58000000" t1="212.58000000" title="B"/>
+		<label t="212.60000000" t1="212.60000000" title="B"/>
+		<label t="212.98700000" t1="212.98700000" title="B"/>
+		<label t="213.02200000" t1="213.02200000" title="B"/>
+		<label t="213.04200000" t1="213.04200000" title="B"/>
+		<label t="213.41500000" t1="213.41500000" title="B"/>
+		<label t="213.44200000" t1="213.44200000" title="B"/>
+		<label t="213.47900000" t1="213.47900000" title="B"/>
+		<label t="213.87000000" t1="213.87000000" title="B"/>
+		<label t="213.90300000" t1="213.90300000" title="B"/>
+		<label t="214.29600000" t1="214.29600000" title="B"/>
+		<label t="214.36700000" t1="214.36700000" title="B"/>
+		<label t="214.74900000" t1="214.74900000" title="B"/>
+		<label t="215.20900000" t1="215.20900000" title="B"/>
+		<label t="215.61900000" t1="215.61900000" title="B"/>
+		<label t="215.68700000" t1="215.68700000" title="B"/>
+		<label t="215.70800000" t1="215.70800000" title="B"/>
+		<label t="216.05000000" t1="216.05000000" title="B"/>
+		<label t="216.07200000" t1="216.07200000" title="B"/>
+		<label t="216.10700000" t1="216.10700000" title="B"/>
+		<label t="216.50000000" t1="216.50000000" title="B"/>
+		<label t="216.54700000" t1="216.54700000" title="B"/>
+		<label t="216.56800000" t1="216.56800000" title="B"/>
+		<label t="216.94200000" t1="216.94200000" title="B"/>
+		<label t="216.95300000" t1="216.95300000" title="B"/>
+		<label t="216.97000000" t1="216.97000000" title="B"/>
+		<label t="217.00800000" t1="217.00800000" title="B"/>
+		<label t="217.37400000" t1="217.37400000" title="B"/>
+		<label t="217.43100000" t1="217.43100000" title="B"/>
+		<label t="217.45000000" t1="217.45000000" title="B"/>
+		<label t="217.85300000" t1="217.85300000" title="B"/>
+		<label t="218.27800000" t1="218.27800000" title="B"/>
+		<label t="218.29100000" t1="218.29100000" title="B"/>
+		<label t="218.75800000" t1="218.75800000" title="B"/>
+		<label t="218.77600000" t1="218.77600000" title="B"/>
+		<label t="219.15000000" t1="219.15000000" title="B"/>
+		<label t="219.15900000" t1="219.15900000" title="B"/>
+		<label t="219.19500000" t1="219.19500000" title="B"/>
+		<label t="219.37200000" t1="219.37200000" title="B"/>
+		<label t="219.43900000" t1="219.43900000" title="B"/>
+		<label t="219.57200000" t1="219.57200000" title="B"/>
+		<label t="219.59900000" t1="219.59900000" title="B"/>
+		<label t="219.75300000" t1="219.75300000" title="B"/>
+	</labeltrack>
+</project>
