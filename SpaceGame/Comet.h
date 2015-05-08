@@ -9,6 +9,12 @@ private:
 	float radAngle;
 	float radChange;
 
+	float startY;
+	int i;
+	int step;
+	int size;
+	float mod;
+
 public:
 	Comet(float x, float y, ALLEGRO_BITMAP *image, void (*TakeLife)(void));
 	void Destroy();

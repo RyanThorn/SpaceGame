@@ -7,23 +7,27 @@ void SpaceShip::Destroy() {
 }
 
 void SpaceShip::Init(ALLEGRO_BITMAP *image) {
-	GameObject::Init(20, 200, 4, 4, 0, 0, 13, 16);
+	GameObject::Init(20, 200, 4, 4, 0, 0, 40, 37);
 
 	SetID(PLAYER);
 	SetAlive(true);
 
-	lives = 100;
+	lives = 50;
 	maxLives = lives;
 	score = 0;
 
-	maxFrame = 3;
+	maxFrame = 2;
 	curFrame = 0;
-	frameWidth = 46;
-	frameHeight = 41;
-	animationColumns = 3;
+	frameCount = 0;
+	frameDelay = 10;
+	frameWidth = 130;
+	frameHeight = 80;
+	animationColumns = 2;
 	animationDirection = 1;
 
-	animationRow = 1;
+	animationRow = 2;
+
+	preventSideCols = false;
 
 	if(image != NULL)
 		SpaceShip::image = image;
@@ -35,48 +39,63 @@ void SpaceShip::Update() {
 	if(x < 0)
 		x = 0;
 	else if(x > WIDTH)
-		x = WIDTH;
+		if (!preventSideCols)
+			x = WIDTH;
 
-	if(y < 0)
-		y = 0;
-	else if(y > HEIGHT)
-		y = HEIGHT;
+	if(y < 100)
+		y = 100;
+	else if (y > HEIGHT - 20){
+		
+		y = HEIGHT - 20;
+	}
+
+	if(++frameCount >= frameDelay) {
+		curFrame += animationDirection;
+		if(curFrame >= maxFrame)
+			curFrame = 0;
+		else if(curFrame <= 0)
+			curFrame = maxFrame;
+
+		frameCount = 0;
+	}
 }
 
 void SpaceShip::Render() {
 	GameObject::Render();
 
 	int fx = (curFrame % animationColumns) * frameWidth;
+	//int fy = (curFrame / animationColumns) * frameHeight;
+	int fy = animationRow * frameHeight;
+	al_draw_bitmap_region(image, fx, fy, frameWidth, frameHeight, x - frameWidth / 2, y - frameHeight / 2, 0);
+
+	/*int fx = (curFrame % animationColumns) * frameWidth;
 	int fy = animationRow * frameHeight;
 
-	al_draw_bitmap_region(image, fx, fy, frameWidth, frameHeight, x - frameWidth / 2, y - frameHeight / 2, 0);
+	al_draw_bitmap_region(image, fx, fy, frameWidth, frameHeight, x - frameWidth / 2, y - frameHeight / 2, 0);*/
 }
 
 void SpaceShip::MoveUp() {
-	animationRow = 0;
 	dirY = -1;
 }
 void SpaceShip::MoveDown() {
-	animationRow = 2;
 	dirY = 1;
 }
 void SpaceShip::MoveLeft() {
-	curFrame = 2;
 	dirX = -1;
+	animationRow = 1;
 }
 void SpaceShip::MoveRight() {
-	curFrame = 1;
 	dirX = 1;
+	animationRow = 0;
 }
 
 void SpaceShip::ResetAnimation(int position) {
 	if(position == 1) {
-		animationRow = 1;
 		dirY = 0;
 	} else {
-		curFrame = 0;
 		dirX = 0;
 	}
+	animationRow = 2;
 }
 
 void SpaceShip::Collided(int objectID) {
@@ -85,6 +104,15 @@ void SpaceShip::Collided(int objectID) {
 }
 
 float SpaceShip::GetLifePercent() {
-	float percent = ((float)lives / 100.0) * 100.00;
+	float percent = ((float)lives / 50.0) * 100.00;
 	return percent;
+}
+
+void SpaceShip::MoveOffScreen() {
+	preventSideCols = true;
+	dirX = 1;
+	animationRow = 0;
+	if (SpaceShip::x > WIDTH + 100) {
+		this->Destroy();
+	}
 }

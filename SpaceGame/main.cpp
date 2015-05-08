@@ -19,6 +19,8 @@
 #include "Explosion.h"
 #include "Background.h"
 #include "Globals.h"
+#include "Button.h"
+#include "Bobbing.h"
 
 // Globals for main
 bool keys[] = { false, false, false, false, false };
@@ -40,12 +42,23 @@ ALLEGRO_SAMPLE_INSTANCE *songInstance;
 ALLEGRO_SAMPLE_INSTANCE *lossSongInst;
 ALLEGRO_AUDIO_STREAM *songStream;
 
+bool hasFinished = false;
 float stateTime = 0;
+// Init state as -1 (no state)
+int state = -1;
+bool done = false;
 // Main prototype functions
 void __cdecl TakeLife();
 void __cdecl ScorePoint();
+void __cdecl BtnToPlay();
+void __cdecl BtnToQuit();
+void __cdecl BtnToInstr();
 void ChangeState(int &state, int newState);
 void DrawPercentBar(int x, int y, int w, int h, float percent, ALLEGRO_BITMAP * border, ALLEGRO_BITMAP * bar, ALLEGRO_FONT* font);
+
+int camX = 0, camY = 0;
+float camAng = 0.0;
+ALLEGRO_TRANSFORM cam;
 
 int main(int argc, char **argv) {
 	int currentSpawn = 0;
@@ -54,7 +67,6 @@ int main(int argc, char **argv) {
 	}
 
 	// Local variables
-	bool done = false;
 	bool render = false;
 	bool showColBox = false;
 
@@ -66,9 +78,6 @@ int main(int argc, char **argv) {
 	float lastFound = 0;
 
 	ship = new SpaceShip();	
-
-	// Init state as -1 (no state)
-	int state = -1;
 
 	// Allegro Variables
 	ALLEGRO_BITMAP *shipImage = NULL;
@@ -82,6 +91,9 @@ int main(int argc, char **argv) {
 	ALLEGRO_BITMAP *healthbar_border = NULL;
 	ALLEGRO_BITMAP *healthbar_bar = NULL;
 	ALLEGRO_BITMAP *top_bar = NULL;
+	ALLEGRO_BITMAP *buttonImg = NULL;
+	ALLEGRO_BITMAP *logo = NULL;
+	ALLEGRO_BITMAP *frog = NULL;
 	ALLEGRO_SAMPLE *shot = NULL;
 	ALLEGRO_SAMPLE *boom = NULL;
 	ALLEGRO_SAMPLE *death = NULL;
@@ -105,9 +117,8 @@ int main(int argc, char **argv) {
 	ALLEGRO_FONT *pix_font18_b;
 	ALLEGRO_FONT *pix_font28_b;
 
-	ALLEGRO_TRANSFORM cam;
-	int camX = 0, camY = 0;
-	float camAng = 0.0;
+	
+	ALLEGRO_MOUSE_STATE mouseState;
 	
 	// Init Allegro
 	if(!al_init())
@@ -118,10 +129,11 @@ int main(int argc, char **argv) {
 	if(!display)
 		return -1;
 
-	al_set_window_title(display, "SpaceFace (No Grey) - By Ryan (MrBotox) Thorn - v0.1");
+	al_set_window_title(display, "SpaceGame - By Ryan Thorn - v0.8");
 
 	// Addon init and installs
 	al_install_keyboard();
+	al_install_mouse();
 	al_init_image_addon();
 	al_init_font_addon();
 	al_init_ttf_addon();
@@ -146,10 +158,12 @@ int main(int argc, char **argv) {
 
 	al_reserve_samples(15);
 
+	logo = al_load_bitmap("media/img/gamelogo.png");
+
 	bgImage = al_load_bitmap("media/img/starBG.png");
-	mgImage = al_load_bitmap("media/img/starMG-kappa.png");
+	mgImage = al_load_bitmap("media/img/planets-nostar.png");
 	fgImage = al_load_bitmap("media/img/starFG.png");
-	
+	frog = al_load_bitmap("media/img/frog.gif");
 	healthbar_border = al_load_bitmap("media/img/healthbar_border.png");
 	healthbar_bar = al_load_bitmap("media/img/healthbar_bar.png");
 	top_bar = al_load_bitmap("media/img/top_bar.png");
@@ -163,27 +177,34 @@ int main(int argc, char **argv) {
 	bg = new Background(fgImage, 3);
 	objects.push_back(bg);
 
-	shipImage = al_load_bitmap("media/img/datsheffy-ship.png");
+	shipImage = al_load_bitmap("media/img/SpaceshipSprite.png");
 	ship->Init(shipImage);
 
 	objects.push_back(ship);
 
 	cometImage = al_load_bitmap("media/img/comet.png");
-	explImage = al_load_bitmap("media/img/explosion_3_40_128.png");
+	explImage = al_load_bitmap("media/img/explosion.png");
 
-	titleImage = al_load_bitmap("media/img/Shooter_Title.png");
-	lostImage = al_load_bitmap("media/img/Shooter_Lose.png");
+	titleImage = al_load_bitmap("media/img/1280x720-titlemenu.png");
+	lostImage = al_load_bitmap("media/img/background.png");
 
 	titleScreen = new Background(titleImage, 0);
 	lostScreen = new Background(lostImage, 0);
 
-	shot = al_load_sample("media/sound/pew-formal.ogg");
-	boom = al_load_sample("media/sound/ow.ogg");
+	buttonImg = al_load_bitmap("media/img/button-main.png");
+
+	Bobbing *logoBob = new Bobbing((WIDTH / 2) - 412, 90, logo, 100,50,0.5,1);
+	Button *playBtn = new Button(buttonImg, pix_font28_b, "Play", (WIDTH / 2) - 256, 300, 512, 128, &BtnToPlay);
+	Button *quitBtn = new Button(buttonImg, pix_font28_b, "Quit", (WIDTH / 2) - 256, 458, 512, 128, &BtnToQuit);
+
+	shot = al_load_sample("media/sound/laser_shot.ogg");
+	boom = al_load_sample("media/sound/comet_explosion.ogg");
 	death = al_load_sample("media/sound/death.ogg");
 	song = al_load_sample("media/sound/darude.ogg");
 	lost_song = al_load_sample("media/sound/loss-music.ogg");
 
 	songInstance = al_create_sample_instance(song);
+	al_set_sample_instance_gain(songInstance, 2);
 	al_set_sample_instance_playmode(songInstance, ALLEGRO_PLAYMODE_ONCE);
 	al_attach_sample_instance_to_mixer(songInstance, al_get_default_mixer());
 
@@ -234,13 +255,11 @@ int main(int argc, char **argv) {
 					if (state == TITLE) {
 						ChangeState(state, PLAYING);
 					} else if (state == PLAYING) {
-						Bullet *bullet1 = new Bullet(ship->GetX() + 15, ship->GetY() - 30, &ScorePoint);
-						Bullet *bullet2 = new Bullet(ship->GetX() + 15, ship->GetY(), &ScorePoint);
-						Bullet *bullet3 = new Bullet(ship->GetX() + 15, ship->GetY() + 30, &ScorePoint);
+						Bullet *bullet1 = new Bullet(ship->GetX() + 38, ship->GetY() - 22, &ScorePoint);
+						Bullet *bullet2 = new Bullet(ship->GetX() + 38, ship->GetY() + 20, &ScorePoint);
 						objects.push_back(bullet1);
 						objects.push_back(bullet2);
-						objects.push_back(bullet3);
-						al_play_sample(shot, 1, 0, 1, ALLEGRO_PLAYMODE_ONCE, 0);
+						al_play_sample(shot, 0.6, 0, 1, ALLEGRO_PLAYMODE_ONCE, 0);
 					}
 					break;
 				case ALLEGRO_KEY_F:
@@ -280,11 +299,15 @@ int main(int argc, char **argv) {
 			// Update Game Objs
 			render = true;
 			frames++;
+			al_get_mouse_state(&mouseState);
 			
-			if (elapsedTime >= 300){
+			if (elapsedTime >= 2){
+				hasFinished = true;
+				
+			}
+			if (elapsedTime >= 228){
 				ChangeState(state, WIN);
 			}
-
 			if (al_current_time() - gameTime >= 1) {
 				gameTime = al_current_time();
 				gameFPS = frames;
@@ -293,29 +316,37 @@ int main(int argc, char **argv) {
 
 			if (state == PLAYING) {
 				elapsedTime = roundf((al_current_time() - stateTime) * 100) / 100;
-				if(keys[UP])
-					ship->MoveUp();
-				else if(keys[DOWN])
-					ship->MoveDown();
-				else
-					ship->ResetAnimation(1);
+				if (!hasFinished){
+					if (keys[UP])
+						ship->MoveUp();
+					else if (keys[DOWN])
+						ship->MoveDown();
+					else {
+						if (!hasFinished)
+							ship->ResetAnimation(1);
+					}
 
-				if(keys[LEFT])
-					ship->MoveLeft();
-				else if(keys[RIGHT])
-					ship->MoveRight();
-				else
-					ship->ResetAnimation(0);
+					if (hasFinished){
+						std::cout << "FINISHED" << std::endl;
+						ship->MoveOffScreen();
+					}
 
+					if (keys[LEFT])
+						ship->MoveLeft();
+					else if (keys[RIGHT])
+						ship->MoveRight();
+					else {
+						if (!hasFinished)
+							ship->ResetAnimation(0);
+					}
+				}
 				size_t spawnTimesSize = sizeof(spawnTimes) / sizeof(int);
 				float *end = spawnTimes + spawnTimesSize;
 
 				auto it = std::find(spawnTimes, end, elapsedTime);
 				if (it >= end) {
-					std::cout << "No Spawn" << std::endl;
 				} else {
 					if (hasSpawned[it - spawnTimes] == false) {
-						std::cout << "Spawn" << std::endl;
 						Comet *comet = new Comet(WIDTH, 100 + rand() % (HEIGHT - 110), cometImage, &TakeLife);
 						objects.push_back(comet);
 
@@ -357,7 +388,7 @@ int main(int argc, char **argv) {
 							Explosion *explosion = new Explosion(((*iter)->GetX() + (*iter2)->GetX()) / 2, ((*iter)->GetY() + (*iter2)->GetY()) / 2, explImage);
 
 							objects.push_back(explosion);
-							al_play_sample(boom, 1, 0, 1, ALLEGRO_PLAYMODE_ONCE, 0);
+							al_play_sample(boom, 0.6, 0, 1, ALLEGRO_PLAYMODE_ONCE, 0);
 						}
 					}
 				}
@@ -366,6 +397,11 @@ int main(int argc, char **argv) {
 					al_play_sample(death, 1, 0, 1, ALLEGRO_PLAYMODE_ONCE, 0);
 					ChangeState(state, LOST);
 				}
+			}
+			else if (state == TITLE){
+				playBtn->Update(mouseState);
+				quitBtn->Update(mouseState);
+				logoBob->Update();
 			}
 
 			// delete dead objects
@@ -385,6 +421,10 @@ int main(int argc, char **argv) {
 			render = false;
 			if(state == TITLE) {
 				titleScreen->Render();
+				playBtn->Render();
+				quitBtn->Render();
+				logoBob->Render();
+				
 			} else if(state == PLAYING) {
 				for (iter = objects.begin(); iter != objects.end(); ++iter) {
 					(*iter)->Render();
@@ -396,39 +436,45 @@ int main(int argc, char **argv) {
 				al_draw_textf(pix_font16_rg, al_map_rgb(200, 200, 200), WIDTH - 205, 14, 0, "Time: %i", (int)round(elapsedTime));
 				al_draw_textf(pix_font16_rg, al_map_rgb(200, 200, 200), WIDTH - 410, 14, 0, "Score: %i", ship->GetScore());
 				al_draw_textf(pix_font16_rg, al_map_rgb(200, 200, 200), WIDTH / 2, 14, 0, "Spawned: %i", currentSpawn);
-				//al_draw_textf(font18, al_map_rgb(255, 255, 255), 10, 30, 0, "%i lives left. RIP'D %i Kappas", ship->GetLives(), ship->GetScore());
-				camAng += 0.1;
-				if (camAng >= 0.1){
-					camAng = 0.0;
+				if ((elapsedTime > 29 && elapsedTime < 85) || (elapsedTime > 150 && elapsedTime < 220)){
+					camAng += 0.1;
+					if (camAng >= 0.1){
+						camAng = 0.0;
+					}
+					else {
+						camAng = 0.1;
+					}
+					if (camX == 0){
+						camX = 5;
+					}
+					else if (camX == 5) {
+						camX = 0;
+					}
+					if (camY == 0){
+						camY = 5;
+					}
+					else if (camY == 5) {
+						camY = 0;
+					}
 				}
 				else {
-					camAng = 0.1;
-				}
-				if (camX == 0){
-					camX = 5;
-				}
-				else if (camX == 5) {
+					camAng = 0;
 					camX = 0;
-				}
-				if (camY == 0){
-					camY = 5;
-				}
-				else if (camY == 5) {
 					camY = 0;
 				}
-				if (elapsedTime > 29){
-					al_identity_transform(&cam);
-					al_translate_transform(&cam, -(WIDTH / 2) + camX, -(HEIGHT / 2) + camY);
-					al_rotate_transform(&cam, camAng);
-					al_translate_transform(&cam, WIDTH / 2, HEIGHT / 2);
-					al_use_transform(&cam);
-				}
+
+				al_identity_transform(&cam);
+				al_translate_transform(&cam, -(WIDTH / 2) + camX, -(HEIGHT / 2) + camY);
+				al_rotate_transform(&cam, camAng);
+				al_translate_transform(&cam, WIDTH / 2, HEIGHT / 2);
+				al_use_transform(&cam);
+
 			} else if(state == LOST) {
 				lostScreen->Render();
 			} else if (state == WIN) {
 				al_draw_textf(pix_font18_b, al_map_rgb(255, 255, 255), WIDTH / 2 - 200, HEIGHT / 2, 0, "You won with a score of %i", ship->GetScore());
 				al_draw_textf(pix_font18_b, al_map_rgb(255, 255, 255), WIDTH / 2 - 180, HEIGHT / 2 + 25, 0, "You lasted %f seconds", elapsedTime);
-				al_draw_text(pix_font18_b, al_map_rgb(255, 0, 0), WIDTH - 200, HEIGHT - 25, 0, "This win screen is temporary");
+				al_draw_text(pix_font18_b, al_map_rgb(255, 0, 0), WIDTH - 600, HEIGHT - 25, 0, "This win screen is temporary");
 			}
 			
 			al_draw_textf(pix_font12_rg, al_map_rgb(255, 255, 255), WIDTH - 80, HEIGHT - 50, 0, "FPS: %i", gameFPS);
@@ -448,11 +494,15 @@ int main(int argc, char **argv) {
 
 	lostScreen->Destroy();
 	titleScreen->Destroy();
+
+	playBtn->Destroy();
+	quitBtn->Destroy();
+	logoBob->Destroy();
 	
 	delete lostScreen;
 	delete titleScreen;
 	
-	al_destroy_bitmap(mgImage);
+	//al_destroy_bitmap(mgImage);
 	al_destroy_bitmap(fgImage);
 	al_destroy_bitmap(bgImage);
 	al_destroy_bitmap(explImage);
@@ -460,6 +510,7 @@ int main(int argc, char **argv) {
 	al_destroy_bitmap(cometImage);
 	al_destroy_bitmap(titleImage);
 	al_destroy_bitmap(lostImage);
+	al_destroy_bitmap(buttonImg);
 	
 	al_destroy_sample(boom);
 	al_destroy_sample(song);
@@ -500,9 +551,21 @@ void __cdecl ScorePoint() {
 	ship->AddPoint();
 }
 
+void __cdecl BtnToPlay() {
+	ChangeState(state, PLAYING);
+}
+
+void __cdecl BtnToQuit() {
+	done = true;
+}
+
+void __cdecl BtnToInstr() {
+
+}
+
 void ChangeState(int &state, int newState) {
 	stateTime = al_current_time();
-	if(state ==TITLE) {
+	if(state == TITLE) {
 	
 	} else if(state == PLAYING) {
 		for(iter = objects.begin(); iter != objects.end(); ++iter) {
@@ -517,7 +580,7 @@ void ChangeState(int &state, int newState) {
 
 	state = newState;
 
-	if(state ==TITLE){
+	if(state == TITLE){
 	
 	} else if(state == PLAYING) {
 		ship->Init();

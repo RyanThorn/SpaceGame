@@ -10,6 +10,8 @@ private:
 	int animationRow;
 	int maxLives;
 
+	bool preventSideCols;
+
 public:
 	SpaceShip();
 	void Destroy();
@@ -22,6 +24,8 @@ public:
 	void MoveDown();
 	void MoveLeft();
 	void MoveRight();
+
+	void MoveOffScreen();
 
 	void ResetAnimation(int position);
 

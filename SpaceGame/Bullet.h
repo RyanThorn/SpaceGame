@@ -13,6 +13,5 @@ public:
 
 	void Update();
 	void Render();
-
 	void Collided(int objectID);
 };

@@ -40,6 +40,6 @@ void Explosion::Render() {
 
 	int fx = (curFrame % animationColumns) * frameWidth;
 	int fy = (curFrame / animationColumns) * frameHeight;
-
+	//al_draw_bitmap(image, x, y, 0);
 	al_draw_bitmap_region(image, fx, fy, frameWidth, frameHeight, x - frameWidth / 2, y - frameHeight / 2, 0);
 }

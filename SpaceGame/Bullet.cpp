@@ -27,6 +27,7 @@ void Bullet::Render()
 	al_draw_filled_circle(x, y, 2, al_map_rgb(255, 255, 255));
 }
 
+
 void Bullet::Collided(int objectID)
 {
 	if(objectID == ENEMY || objectID == BORDER)
