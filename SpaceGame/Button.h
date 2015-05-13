@@ -19,9 +19,10 @@ private:
 	int i;
 	int step;
 	int size;
-	float mod;
+	
+	bool bob;
 public:
-	Button(ALLEGRO_BITMAP *image, ALLEGRO_FONT *font, const char *btnText, float x, float y, int boundX, int boundY, void(*BtnAction)(void));
+	Button(ALLEGRO_BITMAP *image, ALLEGRO_FONT *font, const char *btnText, float x, float y, int boundX, int boundY, void(*BtnAction)(void), bool bob);
 	void Destroy();
 
 	void Render();

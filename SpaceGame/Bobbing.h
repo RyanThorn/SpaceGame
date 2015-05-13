@@ -4,14 +4,12 @@ class Bobbing :
 	public GameObject
 {
 private:
-	bool goingUp;
 	float startY;
 	int i;
 	int step;
 	int size;
-	float mod;
 public:
-	Bobbing(float x, float y, ALLEGRO_BITMAP *image, float time, float duration, float change, float beginning);
+	Bobbing(float x, float y, ALLEGRO_BITMAP *image, float step, float size);
 	void Destroy();
 
 	void Update();

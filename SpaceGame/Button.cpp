@@ -3,7 +3,7 @@
 #define _USE_MATH_DEFINES
 #include <math.h>
 
-Button::Button(ALLEGRO_BITMAP *image, ALLEGRO_FONT *font, const char *btnText, float x, float y, int boundX, int boundY, void(*BtnAction)(void))
+Button::Button(ALLEGRO_BITMAP *image, ALLEGRO_FONT *font, const char *btnText, float x, float y, int boundX, int boundY, void(*BtnAction)(void), bool bob)
 {
 	GameObject::Init(x, y, 0, 0, 0, 0, boundX, boundY);
 
@@ -16,7 +16,8 @@ Button::Button(ALLEGRO_BITMAP *image, ALLEGRO_FONT *font, const char *btnText, f
 	Button::i = 0;
 	Button::step = 1;
 	Button::size = 10;
-	Button::mod = 0;
+
+	Button::bob = bob;
 }
 
 void Button::Destroy() {
@@ -28,9 +29,9 @@ void Button::Update(ALLEGRO_MOUSE_STATE state) {
 	tempX = state.x;
 	tempY = state.y;
 
-	mod = (startY - round(sin(i * M_PI / 180) * size));
+	if (bob)
+		y = (startY - round(sin(i * M_PI / 180) * size));
 	i++;
-	y = mod;
 
 	if ((state.x >= x && state.y >= y) &&
 		(state.x <= boundX + x && state.y <= boundY + y)){
