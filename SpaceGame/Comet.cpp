@@ -66,6 +66,12 @@ void Comet::Update() {
 	// if the comet goes off the screen, kill it
 	if(x + frameWidth < 0)
 		Collided(BORDER);
+
+	if (y < 100)
+		y = 100;
+	else if (y > HEIGHT - 20){
+		y = HEIGHT - 20;
+	}
 }
 
 void Comet::Render() {

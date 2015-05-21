@@ -3,7 +3,7 @@
 Bullet::Bullet(float x, float y, void(*ScorePoint)(void))
 {
 	// super class init
-	GameObject::Init(x, y, 6, 0, 1, 0, 0, 0);
+	GameObject::Init(x, y, 16, 0, 1, 0, 0, 0);
 
 	// set this objects ID to BULLET
 	SetID(BULLET);

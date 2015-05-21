@@ -158,12 +158,14 @@ std::list<GameObject *>::iterator iter;		// A iterator list used to loop through
 std::list<GameObject *>::iterator iter2;	// Second iterator used for collisions between two game objects
 Background *titleScreen;					// Our Title Screen background object
 Background *lostScreen;						// Our Lost Screen background object
+Background *wonScreen;						// Our Won Screen background object
 Background *instrScreen;					// Our Instruction Screen background object
 ALLEGRO_SAMPLE_INSTANCE *songInstance;		// The song instance for the song playing in the PLAYING state
 ALLEGRO_SAMPLE_INSTANCE *lossSongInst;		// The song instance for the song playing in the LOST state
 
 bool hasFinished = false;					// A bool which indicates whether the player has completed the required stages for the game
 float stateTime = 0;						// The system time where the player enters a different state. Used to calculated the PLAYING states elapsedTime
+float elapsedTime = 0;		// The amount of time that has passed since the player began the PLAYING state
 // Init state as -1 which is effectively no state
 int state = -1;
 // This is our done variable which when true will exit the game loop
@@ -187,7 +189,6 @@ float camAng = 0.0;
 // Our camera object
 ALLEGRO_TRANSFORM cam;
 
-
 // The main function!
 int main(int argc, char **argv) {
 	
@@ -202,7 +203,6 @@ int main(int argc, char **argv) {
 
 	int frames = 0;				// Amount of frames that have been rendered
 	int gameFPS = 0;			// The current game FPS, calculated using gameTime and frames
-	float elapsedTime = 0;		// The amount of time that has passed since the player began the PLAYING state
 	float gameTime = 0;			// The current gameTime from initialisation
 	
 	// Our ship object (A.K.A the player object)
@@ -217,6 +217,7 @@ int main(int argc, char **argv) {
 	ALLEGRO_BITMAP *fgImage = NULL;				// The bitmap that stores our foreground image
 	ALLEGRO_BITMAP *titleImage = NULL;			// The bitmap that stores our title image
 	ALLEGRO_BITMAP *lostImage = NULL;			// The bitmap that stores our lost image
+	ALLEGRO_BITMAP *wonImage = NULL;			// The bitmap that stores our won image
 	ALLEGRO_BITMAP *healthbar_border = NULL;	// The bitmap that stores our healthbar border
 	ALLEGRO_BITMAP *healthbar_bar = NULL;		// The bitmap that stores our healthbar bar
 	ALLEGRO_BITMAP *top_bar = NULL;				// The bitmap that stores our top_bar image
@@ -333,7 +334,8 @@ int main(int argc, char **argv) {
 	explImage = al_load_bitmap("media/img/explosion.png");
 
 	titleImage = al_load_bitmap("media/img/1280x720-titlemenu.png");
-	lostImage = al_load_bitmap("media/img/background.png");
+	lostImage = al_load_bitmap("media/img/lostScreen.png");
+	wonImage = al_load_bitmap("media/img/wonScreen.png");
 
 	buttonImg = al_load_bitmap("media/img/button-main.png");
 	buttonImgSm = al_load_bitmap("media/img/button-small.png");
@@ -341,6 +343,7 @@ int main(int argc, char **argv) {
 	// Here we create new Background objects for our different screens
 	titleScreen = new Background(titleImage, 0);
 	lostScreen = new Background(lostImage, 0);
+	wonScreen = new Background(wonImage, 0);
 	instrScreen = new Background(titleImage, 0);
 
 	// This is making use of our bobbing class, we specify the x and y that the object will begin at
@@ -425,7 +428,7 @@ int main(int argc, char **argv) {
 						ChangeState(state, PLAYING);
 					} else if (state == PLAYING) {
 						// If we are in the PLAYING state, pressing space will fire a bullet
-						Bullet *bullet1 = new Bullet(ship->GetX() + 50, ship->GetY() - 22, &ScorePoint);
+						Bullet *bullet1 = new Bullet(ship->GetX() + 38, ship->GetY() - 22, &ScorePoint);
 						Bullet *bullet2 = new Bullet(ship->GetX() + 38, ship->GetY() + 20, &ScorePoint);
 						objects.push_back(bullet1);
 						objects.push_back(bullet2);
@@ -436,6 +439,10 @@ int main(int argc, char **argv) {
 				case ALLEGRO_KEY_F:
 					if (state == LOST) {
 						// If in LOST state then change to PLAYING state
+						ChangeState(state, PLAYING);
+					}
+					if (state == WIN) {
+						// If in WIN state then change to PLAYING state
 						ChangeState(state, PLAYING);
 					}
 					break;
@@ -525,10 +532,8 @@ int main(int argc, char **argv) {
 				if (it >= end) {
 				} else {
 					if ((bool)hasSpawned[it - spawnTimes] == false) {
-						Comet *comet = new Comet(WIDTH, 100 + rand() % (HEIGHT - 110), cometImage, &TakeLife);
+						Comet *comet = new Comet(WIDTH + (rand() % 30), 100 + rand() % (HEIGHT - 110), cometImage, &TakeLife);
 						objects.push_back(comet);
-						Comet *comet2 = new Comet(WIDTH, 100 + rand() % (HEIGHT - 110), cometImage, &TakeLife);
-						objects.push_back(comet2);
 
 						hasSpawned[it - spawnTimes] = true;
 						numSpawned++;
@@ -629,7 +634,8 @@ int main(int argc, char **argv) {
 				al_draw_textf(pix_font16_rg, al_map_rgb(200, 200, 200), WIDTH / 2, 60, 0, "Missed: %i", numMissed);
 
 				// Here we handle shaking the screen, if the elapsedTime is in part of the song that is intense, we shake the screen.
-				if ((elapsedTime > 29 && elapsedTime < 85) || (elapsedTime > 150 && elapsedTime < 220)){
+				// SIDE NOTE: I have disabled this for now as it requires some tweaking. Some monitors do not work well with the intense shaking.
+				/*if ((elapsedTime > 29 && elapsedTime < 85) || (elapsedTime > 150 && elapsedTime < 220)){
 					// The updates for our camera movements are here
 					camAng += 0.1;
 					if (camAng >= 0.1){
@@ -662,16 +668,15 @@ int main(int argc, char **argv) {
 				al_translate_transform(&cam, -(WIDTH / 2) + camX, -(HEIGHT / 2) + camY);
 				al_rotate_transform(&cam, camAng);
 				al_translate_transform(&cam, WIDTH / 2, HEIGHT / 2);
-				al_use_transform(&cam);
+				al_use_transform(&cam);*/
 
 			} else if(state == LOST) {
 				// If we are in our LOST state, render the lost screen
 				lostScreen->Render();
 			} else if (state == WIN) {
 				// If we are in our WIN state, render the win screen
-				al_draw_textf(pix_font18_b, al_map_rgb(255, 255, 255), WIDTH / 2 - 200, HEIGHT / 2, 0, "You won with a score of %i", ship->GetScore());
-				al_draw_textf(pix_font18_b, al_map_rgb(255, 255, 255), WIDTH / 2 - 180, HEIGHT / 2 + 25, 0, "You lasted %f seconds", elapsedTime);
-				al_draw_text(pix_font18_b, al_map_rgb(255, 0, 0), WIDTH - 600, HEIGHT - 25, 0, "This win screen is temporary");
+				wonScreen->Render();
+				al_draw_textf(pix_font18_b, al_map_rgb(200, 0, 0), 305, 190, 0, "Score: %i", ship->GetScore());
 			} else if (state == INSTRUCTIONS) {
 				// If we are in our INSTRUCTIONS (help) state, render our help state
 				instrScreen->Render();
@@ -705,6 +710,7 @@ int main(int argc, char **argv) {
 
 	// All our Destroy methods for the different objects
 	lostScreen->Destroy();
+	wonScreen->Destroy();
 	titleScreen->Destroy();
 	instrScreen->Destroy();
 	playBtn->Destroy();
@@ -715,6 +721,7 @@ int main(int argc, char **argv) {
 	
 	// Delete our containers for the lost and title screen.
 	delete lostScreen;
+	delete wonScreen;
 	delete titleScreen;
 	delete instrScreen;
 
@@ -842,6 +849,8 @@ void ChangeState(int &state, int newState) {
 		numSpawned = 0;
 		numKilled = 0;
 		numMissed = 0;
+		hasFinished = false;
+		elapsedTime = 0;
 
 		// Init our ship
 		ship->Init();
@@ -850,7 +859,7 @@ void ChangeState(int &state, int newState) {
 		al_play_sample_instance(songInstance);
 		
 	} else if(state == LOST) {
-		// Play our lost sonf
+		// Play our lost song
 		al_play_sample_instance(lossSongInst);
 	}
 }

@@ -18,7 +18,7 @@ void SpaceShip::Init(ALLEGRO_BITMAP *image) {
 	SetAlive(true);
 
 	// The maximum lives of a player
-	lives = 70;
+	lives = 700000;
 	// A storage of what the maximum lives was
 	maxLives = lives;
 	// current player score set to 0
